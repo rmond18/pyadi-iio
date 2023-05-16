@@ -68,16 +68,17 @@ my_adc.filter_type = "WIDEBAND"
 my_adc.rx_output_type = "SI"
 
 # Set Shift Voltage:
-my_adc.shift_voltage0=40000
-my_adc.shift_voltage1=30000
-my_adc.shift_voltage2=30000
-my_adc.shift_voltage3=30000
+vshift= 43355
+my_adc.shift_voltage0=vshift
+my_adc.shift_voltage1=vshift
+my_adc.shift_voltage2=vshift
+my_adc.shift_voltage3=vshift
 
 # Current Source for each channel:
-#my_adc.sw_cc0=1
-#my_adc.sw_cc1=1
-#my_adc.sw_cc2=0
-#my_adc.sw_cc3=0
+my_adc.CC_CH0=1
+my_adc.CC_CH1=1
+my_adc.CC_CH2=0
+my_adc.CC_CH3=1
 
 # Verify settings:
 print("Power Mode: ", my_adc.power_mode)

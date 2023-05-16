@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Analog Devices, Inc.
+# Copyright (C) 2023 Analog Devices, Inc.
 #
 # All rights reserved.
 #
@@ -193,37 +193,37 @@ class cn0579(rx, context_manager):
         self._set_iio_attr_int("voltage3", "raw", True, int(value), dac_chan)   
        
     @property
-    def sw_cc0(self):
+    def CC_CH0(self):
         """sw_cc: Enable SW_CC. This will also illuminate the blue LED."""
         return self._get_iio_attr("voltage0", "raw", True, self._gpio)
 
-    @sw_cc0.setter
-    def sw_cc0(self, value):
+    @CC_CH0.setter
+    def CC_CH0(self, value):
         self._set_iio_attr_int("voltage0", "raw", True, value, self._gpio)
 
     @property
-    def sw_cc1(self):
+    def CC_CH1(self):
         """sw_cc: Enable SW_CC. This will also illuminate the blue LED."""
         return self._get_iio_attr("voltage1", "raw", True, self._gpio)
 
-    @sw_cc1.setter
-    def sw_cc1(self, value):
+    @CC_CH1.setter
+    def CC_CH1(self, value):
         self._set_iio_attr_int("voltage1", "raw", True, value, self._gpio)
 
     @property
-    def sw_cc2(self):
+    def CC_CH2(self):
         """sw_cc: Enable SW_CC. This will also illuminate the blue LED."""
         return self._get_iio_attr("voltage2", "raw", True, self._gpio)
 
-    @sw_cc2.setter
-    def sw_cc2(self, value):
+    @CC_CH2.setter
+    def CC_CH2(self, value):
         self._set_iio_attr_int("voltage2", "raw", True, value, self._gpio)
 
     @property
-    def sw_cc3(self):
+    def CC_CH3(self):
         """sw_cc: Enable SW_CC. This will also illuminate the blue LED."""
         return self._get_iio_attr("voltage3", "raw", True, self._gpio)
 
-    @sw_cc3.setter
-    def sw_cc3(self, value):
+    @CC_CH3.setter
+    def CC_CH3(self, value):
         self._set_iio_attr_int("voltage3", "raw", True, value, self._gpio)
